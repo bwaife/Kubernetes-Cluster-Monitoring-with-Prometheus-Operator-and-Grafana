@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: custom-alerts
+  namespace: monitoring
+spec:
+  groups:
+  - name: node-alerts
+    rules:
+    - alert: HighCPUUsage
+      expr: node_load1 > 2
+      for: 5m
+      labels:
+        severity: warning
+      annotations:
+        summary: "Node CPU load is high"
