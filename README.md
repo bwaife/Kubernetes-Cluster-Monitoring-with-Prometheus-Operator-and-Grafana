@@ -78,6 +78,6 @@ kubectl apply -f custom-alerts.yaml
 
 #### Screenshoot 
 
-![Screenshot](img.jpg)
+![Screenshot](img.png)
 
 
